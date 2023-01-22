@@ -22,6 +22,9 @@
 
 html {
     font-family: var(--primary-font);
+    scroll-behavior: smooth;
+    scroll-snap-type: proximity;
+    scroll-snap-align: start;
 }
 
 body {
@@ -241,7 +244,7 @@ a {
     background-color: var(--background-color);
     border: none;
     padding: 0.5em 1em;
-    border-radius: var(--dimens-tiny);
+    border-radius: var(--dimens-extra-small);
     font-size: var(--dimens-large);
     cursor: pointer;
 }
