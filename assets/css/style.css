@@ -32,6 +32,11 @@ body {
     color: var(--background-color);
 }
 
+ul {
+    list-style-type: none;
+    padding: var(--dimens-default);
+}
+
 ul, li {
     margin: var(--dimens-default);
 }
@@ -64,12 +69,16 @@ ul, li {
     gap: 0.5em;
     color: var(--background-color);
     padding: var(--dimens-medium);
+    transition: top 0.4s;
     background-color: var(--primary-color);
 }
 
 .main-nav {
     display: flex;
     flex-direction: row;
+    width: 100%;
+    transition: top 0.4s;
+    position: sticky;
 }
 .nav {
     display: flex;
@@ -144,15 +153,19 @@ a {
     }
 }
 
-.dropdown-list, .nav {
+.dropdown-list, .nav, .footer-nav {
     list-style-type: none;
 }
 
 .dropdown-list {
-    padding: var(--dimens-large);
+    padding: var(--dimens-extra-large);
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 1.5em;
+}
+
+.dropdown-item {
+
 }
 
 .dropdown-menu {
@@ -160,19 +173,20 @@ a {
     z-index: 1;
     position: absolute;
     background-color: white;
-    top: 105px;
+    top: 60px;
     box-shadow: 0px 20px 1em 10px var(--shadow-color);
     border-radius: var(--dimens-extra-small);
-    animation: slideUp 0.1s linear;
+    animation: slideUp 0.3s linear;
+
 }
 
 
 @keyframes slideUp {
     0% {
-        top: 110px;
+        top: 70px;
     }
     100% {
-        top: 105px;
+        top: 60px;
     }
 }
 
@@ -191,11 +205,9 @@ a {
     background-position: center;
     background-repeat: no-repeat;
     background-clip: border-box;
-    background-attachment: fixed;
     background: url("../images/college_students_bg.jpeg");
     color: var(--background-color);
 }
-
 
 .motto {
     margin: var(--dimens-default);
@@ -230,6 +242,23 @@ a {
     background-color: var(--primary-color);
     color: var(--background-color);
     font-size: var(--dimens-large);
+}
+
+.learn-more-btn:hover {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    animation: learnMoreButtonAnimation 125ms ease-in;
+}
+
+@keyframes learnMoreButtonAnimation {
+    from {
+        background-color: var(--primary-color);
+        color: var(--background-color);
+    }
+    to {
+        background-color: var(--primary-color);
+        color: var(--primary-color);
+    }
 }
 
 .intro {
@@ -321,24 +350,33 @@ a {
 
 .footer {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    padding: 3em;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2em;
+    gap: 1em;
     background-color: var(--primary-color);
 }
 
-.location-header {
-    font-size: var(--dimens-large);
-    font-weight: 600;
+.footer-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    padding: 1em;
+    justify-content: space-around;
 }
 
-.location {
+.footer-item {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 1em;
     color: var(--background-color);
+}
+
+.footer-item-header {
+    font-size: var(--dimens-large);
+    font-weight: 600;
 }
 
 .view-map-btn {
@@ -347,4 +385,49 @@ a {
     border:none;
     border-radius: var(--dimens-tiny);
     color: var(--primary-color)
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    gap: 1em;
+    margin: var(--dimens-default)
+}
+
+.footer-nav a {
+    color: var(--background-color);
+}
+
+.copyright-section {
+    display: flex;
+    gap: 1em;
+    color: var(--background-color);
+    align-self: center;
+    /* padding: 2em; */
+    align-items: center;
+}
+
+
+@media screen and (max-width: 800px) {
+    .footer-info, .copyright-section {
+        flex-direction: column;
+        gap: 1em;
+        align-items: flex-start;
+        padding: 0;
+        text-align: start;
+    }
+    .core-info-section, .core-info-container .values-container {
+        flex-direction: column;
+        gap: 1em;
+        align-items: flex-start;
+        text-align: start;
+        padding: 1em;
+    }
+    
+}
+
+@media screen {
+    
 }
