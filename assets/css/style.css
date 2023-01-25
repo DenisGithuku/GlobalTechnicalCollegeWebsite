@@ -3,6 +3,7 @@
     --primary-variant-color: rgb(10, 235, 85);
     --secondary-color: rgba(255, 0, 0, 1);
     --secondary-variant-color: rgba(218, 37, 29, 1);
+    --accent-color: rgb(212, 212, 41);
     --background-color: rgba(255, 255, 255, 1);
     --on-background-color: rgba(0,0,0,0.7);
     --on-background-variant-color: rgba(0,0,0,0.5);
@@ -80,6 +81,7 @@ ul, li {
     display: flex;
     flex-direction: row;
     width: 100%;
+    
     transition: top 0.4s;
     position: sticky;
 }
@@ -88,21 +90,24 @@ ul, li {
     flex-direction: row;
     align-items: center;
     font-size: var(--dimens-large);
-    padding: var(--dimens-extra-large);
     gap: var(--dimens-large);
+    box-shadow: 0px 0px 4px 0px lightgray;
+    position: relative;
+    z-index: 1;
     justify-content: center;
-    background-color: var(--secondary-color);
+    background-color: var(--background-color);
     width: 100%;
 }
 
 .main-nav-link {
-    color: var(--background-color);
+    color: var(--primary-color);
+    opacity: .8;
     position: relative;
     font-weight: 600;
 }
 
 .active-link {
-    border-bottom: 2px solid var(--primary-variant-color);
+    opacity: 1;
 }
 
 a {
@@ -111,17 +116,18 @@ a {
 
 .nav-link-item {
     display: inline-block;
+    padding: var(--dimens-extra-large) 0px;
 }
 
 
-.main-nav-link::after {
+.main-nav-link::before {
     content: "";
-    height: 2px;
-    background-color: var(--primary-variant-color);
+    height: 3px;
+    background-color: var(--primary-color);
     width: 100%;
     display: none;
     position: absolute;
-    bottom: 0;
+    top: -40px;
     left: 0;
 }
 
@@ -139,7 +145,7 @@ a {
     }
 }
 
-.main-nav-link:hover::after {
+.main-nav-link:hover::before {
     display: block;
     animation: expandHorizontally 200ms ease-in-out;
 }
@@ -161,17 +167,18 @@ a {
 }
 
 .dropdown-list {
-    padding: var(--dimens-extra-large);
+    padding: var(--dimens-large);
     display: flex;
     flex-direction: column;
     gap: 0.5em;
+    z-index: 2;
 }
 
 .dropdown-item::before {
     content: "";
     position: relative;
     height: 20px;
-    width: 2px;
+    width: 3px;
     left: -10px;
     top: 20px;
     background-color: var(--primary-color);
@@ -198,10 +205,12 @@ a {
 
 .dropdown-menu {
     display: none;
-    z-index: 1;
+    z-index: 5;
     position: absolute;
     background-color: white;
-    top: 60px;
+    filter: opacity(4px);
+    border-top: medium solid var(--primary-color);
+    top: 90px;
     box-shadow: 0px 20px 1em 10px var(--shadow-color);
     border-radius: var(--dimens-extra-small);
     animation: slideUp 0.3s linear;
@@ -213,7 +222,7 @@ a {
         top: 70px;
     }
     100% {
-        top: 60px;
+        top: 90px;
     }
 }
 
@@ -241,7 +250,7 @@ a {
 }
 
 .register-btn {
-    background-color: var(--background-color);
+    background-color: var(--secondary-color);
     border: none;
     padding: 0.5em 1em;
     border-radius: var(--dimens-extra-small);
@@ -259,7 +268,7 @@ a {
 }
 
 .register-link {
-    color: var(--primary-color);
+    color: var(--background-color);
 }
 .learn-more-btn {
     align-self: flex-start;
@@ -313,7 +322,7 @@ a {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 5em 6em;
+    padding: 0em 5em 6em;
 }
 
 .background-info-header {
@@ -337,28 +346,37 @@ a {
 .core-info-section {
     display: flex;
     flex-direction: row;
+    position: relative;
     justify-content: center;
-    gap: 2em;
+    gap: .5em;
+    top: -100px;
     padding: var(--dimens-extra-large);
 }
 
 .core-info-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 2em;
-    text-align: center;
+    align-items: flex-start;
+    gap: 1em;
+    max-width: 400px;
+    padding: 1em;
 }
 
-.core-info-header {
-    background-color: rgb(225, 233, 229);
-    padding: 3em;
-    border-radius: 50%;
-    height: 150px;
-    width: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.core-info-text {
+    color: var(--background-color);
+}
+
+
+.mission {
+    background-color: var(--primary-color);
+}
+
+.vision {
+    background-color: var(--secondary-color);
+}
+
+.values {
+    background-color: var(--accent-color);
 }
 
 .core-info-title {
