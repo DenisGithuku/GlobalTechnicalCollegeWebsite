@@ -469,7 +469,8 @@ a {
     .core-info-section, .core-info-container .values-container {
         flex-direction: column;
         gap: 1em;
-        align-items: flex-start;
+        align-items: center;
+        top: 0;
         text-align: start;
         padding: 1em;
     }
