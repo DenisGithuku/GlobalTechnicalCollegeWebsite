@@ -41,9 +41,10 @@ html {
 .contacts-header {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 1em;
-    background-color: var(--primary-color);
+    font-weight: 500;
+    background-color: var(--secondary-color);
     color: var(--on-primary-color);
 
 }
@@ -61,7 +62,6 @@ html {
     align-items: center;
     background-color: white;
     box-shadow: 0px 0px 4px lightgray;
-    /* padding: 1rem 0; */
 }
 
 ul, li {
@@ -72,23 +72,37 @@ ul, li {
 .sticky {
     position: fixed;
     top: 0;
+    z-index: 2;
     width: 100%;
 }
 
-.main-nav .navbar {
+.main-nav > .navbar {
     display: flex;
     flex-direction: row;
     list-style-type: none;
-    gap: .5rem;
-    /* padding: 1rem; */
 }
+
+
 
 .main-nav-link {
     padding: 0.5em 1em;
+    border-radius: 32px;
     color: var(--on-background-color);
+    transition: all 0.3s;
+
 }
 
+.main-nav-link:hover {
+    color: var(--background-color);
+    background-color: var(--primary-color);
+}
 
+.active-link {
+    padding: 0.5em 1em;
+    border-radius: 32px;
+    color: var(--background-color);
+    background-color: var(--primary-color);
+}
 
 .navbar a {
     text-decoration: none;
@@ -105,8 +119,9 @@ ul, li {
     position: absolute;
     top: 83px;
     opacity: 0;
-    border-radius: 2px;
-    border-top: 3px solid var(--primary-color);
+    z-index: 5;
+    border-top: 2px solid var(--primary-color);
+    border: 1px solid lightgray;
     transition: all 0.3s;
     max-height: 0;
     list-style-type: none;
@@ -150,12 +165,12 @@ ul, li {
     left: 0px;
 }
 
-.dropdown-item:hover, .dropdown-item:hover .dropdown-item-link {
+.dropdown-item:hover, .dropdown-item:hover > .dropdown-item-link {
     background-color: var(--primary-color);
     color: white;
 }
 
-.dropdown-item:hover .dropdown-item-link {
+.dropdown-item:hover > .dropdown-item-link {
     left: 10px;
     background-color: var(--primary-color);
 }
@@ -197,14 +212,23 @@ ul, li {
 }
 
 .register-btn {
-    padding: .8em 1.5em;
+    padding: 1em 1.5em;
     background-color: var(--primary-color);
     border: none;
+    border-radius: 4px;
+    transform: scale(0.9);
+    transition: all 0.3s;
 }
 
-.register-btn a {
+.register-btn:hover {
+    opacity: .8;
+    transform: scale(1);
+}
+
+.register-btn > a {
     color: white;
     text-decoration: none;
+    font-size: 1.2em;
 }
 
 .main-section {
@@ -212,14 +236,60 @@ ul, li {
     height: 300px;
     display: flex;
     flex-direction: column;
-    padding: 4em;
+    padding: 8em;
     justify-content: center;
     color: var(--background-color);
 }
 
 .learn-more-btn {
     align-self: flex-start;
-    padding: 0.8em 1.5em;
+    padding: 1em 2em;
     border: none;
     border-radius: 4px;
+    background-color: var(--primary-color);
+    font-size: 1rem;
+    transition: all 0.3s;
+    color: var(--background-color);
+}
+
+.learn-more-btn:hover {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+}
+
+.core-info-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    top: -100px;
+}
+
+.core-info-container {
+    padding: 2rem;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    color: #333;
+
+}
+
+.vision {
+    background-color: var(--primary-color);
+}
+
+.mission {
+    background-color: var(--secondary-color);
+}
+
+.values {
+    background-color: var(--accent-color);
+}
+
+.core-info-title {
+    text-overflow: clip;
+    text-transform: uppercase;
+    font-weight: bold;
 }
