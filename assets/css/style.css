@@ -56,10 +56,12 @@ html {
     gap: 2rem;
 }
 
+
 .main-nav {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    gap: 2em;
     align-items: center;
     background-color: white;
     box-shadow: 0px 0px 2px lightgray;
@@ -75,6 +77,26 @@ ul, li {
     top: 0;
     z-index: 2;
     width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+    max-width: 300px;
+    text-align: center;
+}
+
+.site-name {
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    text-overflow: clip;
+}
+
+.logo {
+    max-width: 40px;
+    max-height: 40px;
 }
 
 .main-nav > .navbar {
