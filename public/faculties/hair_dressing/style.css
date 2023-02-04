@@ -1,0 +1,70 @@
+* {
+    --primary-color: rgba(0, 153, 51, 1);
+    --on-primary-color: white;
+    --primary-variant-color: rgb(10, 235, 85);
+    --secondary-color: rgba(255, 0, 0, 1);
+    --secondary-variant-color: rgba(218, 37, 29, 1);
+    --accent-color: rgb(212, 212, 41);
+    --background-color: rgba(255, 255, 255, 1);
+    --on-background-color: #333;
+    --on-background-variant-color: rgba(0,0,0,0.5);
+    --shadow-color: rgba(211, 211, 211, 0.137);
+    --dimens-default: 0px;
+    --dimens-tiny: 2px;
+    --dimens-extra-small: 4px;
+    --dimens-small: 8px;
+    --dimens-medium: 12px;
+    --active-link-color: rgba(103, 236, 169, 0.801);
+    --dimens-large: 16px;
+    --dimens-extra-large: 32px;
+    --dimens-xxl: 64px;
+    --primary-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--primary-font);
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.courses-section {
+    display: flex;
+    flex-direction: column;
+    padding: 4em;
+    justify-content: center;
+    align-items: center;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgba(192, 226, 198, 1);
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgba(211, 211, 219, 1);
+}
+
+thead > tr {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+table, th, td {
+    border: 1px solid #fff;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 1em;
+}
