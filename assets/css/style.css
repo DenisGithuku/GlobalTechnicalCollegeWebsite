@@ -43,7 +43,7 @@ html {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    padding: 1em;
+    padding: .5em;
     font-weight: 500;
     background-color: var(--secondary-color);
     color: var(--on-primary-color);
@@ -264,7 +264,6 @@ ul, li {
     flex-direction: row;
     justify-content: center;
     position: relative;
-    z-index: 1;
     top: -100px;
 }
 
@@ -274,7 +273,7 @@ ul, li {
     display: flex;
     flex-direction: column;
     gap: 1em;
-    color: #333;
+    color: #fff;
 
 }
 
@@ -283,11 +282,11 @@ ul, li {
 }
 
 .mission {
-    background-color: var(--secondary-color);
+    background-color: rgb(2, 131, 45);
 }
 
 .values {
-    background-color: var(--accent-color);
+    background-color: rgb(3, 117, 41);
 }
 
 .core-info-title {
