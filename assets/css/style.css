@@ -324,6 +324,17 @@ ul, li {
     justify-content: center;
 }
 
+.reveal {
+    position: relative;
+    transform: translateY(50px);
+    transition: all 1s ease;
+    opacity: 0;
+}
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
 .background-info-body {
     display: flex;
     flex-direction: row;
