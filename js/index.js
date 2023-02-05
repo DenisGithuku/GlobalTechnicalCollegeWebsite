@@ -30,7 +30,7 @@ const revealer = () => {
     const elementHeight = revealItem.getBoundingClientRect().top
 
     //set the height at which the element should be revealed
-    const revealDistance = 50
+    const revealDistance = 150
 
     if (elementHeight < windowHeight - revealDistance) {
       revealItem.classList.add('active')
@@ -40,5 +40,31 @@ const revealer = () => {
   })
 }
 
+
 //check the scroll on page load
 revealer()
+
+const revealCoreInfoContainers = () => {
+  const coreInfoContainers = document.querySelectorAll('.core-info-container-reveal')
+
+  coreInfoContainers.forEach(coreInfoContainer => {
+    //get ref to core into containers
+
+    // get ref to the viewport width
+    const windowWidth = window.innerWidth
+
+    // set the distance required for reveal
+    const revealDistance = 50
+
+    //calculate left of container
+    const leftOfContainer = coreInfoContainer.getBoundingClientRect().left
+    if (leftOfContainer < windowWidth - revealDistance) {
+      coreInfoContainer.classList.add('core-info-active')
+    } else {
+      coreInfoContainer.classList.remove('core-info-active')
+    }
+    
+  })
+}
+
+revealCoreInfoContainers()

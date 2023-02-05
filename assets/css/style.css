@@ -296,7 +296,19 @@ ul, li {
     flex-direction: column;
     gap: 1em;
     color: #fff;
+    
+}
 
+.core-info-container-reveal {
+    position: relative;
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: all 1s ease-in .5s;
+}
+
+.core-info-active {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .vision {
@@ -326,11 +338,11 @@ ul, li {
 
 .reveal {
     position: relative;
-    transform: translateY(50px);
+    transform: translateY(150px);
     transition: all 1s ease;
     opacity: 0;
 }
-.reveal.active {
+.active {
     transform: translateY(0);
     opacity: 1;
 }
