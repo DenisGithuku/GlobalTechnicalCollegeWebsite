@@ -376,9 +376,46 @@ ul, li {
 }
 
 .course-section {
-    padding: 1em 2em;
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    padding: 4em;
+    justify-content: center;
+    align-items: center;
+}
+
+.course-section .header {
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    padding: 1em;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgba(192, 226, 198, 1);
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgba(211, 211, 219, 1);
+}
+
+thead > tr {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+table, th, td {
+    border: 1px solid #fff;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+tbody > tr td:first-child {
+    text-align: start;
+}
+
+th, td {
+    padding: 1em;
 }
 
 .course-list {
