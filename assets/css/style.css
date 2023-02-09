@@ -31,7 +31,6 @@ body {
 
 html {
     scroll-behavior: smooth;
-    scroll-snap-align: none;
 }  
 
 .container {
@@ -328,12 +327,15 @@ ul, li {
     text-transform: uppercase;
     font-weight: bold;
 }
+
+
 .background-info {
     padding: 2em 10em;
     display: flex;
     gap: 1.5em;
     flex-direction: column;
     justify-content: center;
+    scroll-margin-top: 400px;
 }
 
 .reveal {
