@@ -286,7 +286,7 @@ ul, li {
     flex-direction: row;
     justify-content: center;
     position: relative;
-    top: -100px;
+    margin-top: -100px;
 }
 
 .core-info-container {
