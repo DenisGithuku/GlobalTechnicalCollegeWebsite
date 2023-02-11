@@ -445,6 +445,26 @@ th, td {
     padding: 3em;
 }
 
+.why-global ul {
+    list-style-type: square;
+}
+
+.why-global .additional-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.heading {
+    text-transform: uppercase;
+}
+
+.payment-heading {
+    background-color: var(--secondary-color);
+    padding: 1em 2em;
+    color: #fff;
+}
+
 
 .why-global-item {
     width: 100%;
