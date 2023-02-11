@@ -19,6 +19,8 @@
     --dimens-extra-large: 32px;
     --dimens-xxl: 64px;
     --primary-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0;
+    margin: 0;
 }
 
 
@@ -423,9 +425,75 @@ th, td {
 .course-list {
     min-width: 400px;
 }
-p {
-    margin: 0;
-    padding: 0;
+
+
+.why-global {
+    display: flex;
+    flex-direction: row;
+    line-height: 1.5em;
+    align-items: stretch;
+    scroll-margin-top: 200px;
+    width: 100%;
+}
+
+.why-global > .intro {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    color: white;
+    background-color: var(--primary-color);
+    padding: 3em;
+}
+
+.why-global ul {
+    list-style-type: square;
+}
+
+.why-global .additional-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.heading {
+    text-transform: uppercase;
+}
+
+.payment-heading {
+    background-color: var(--secondary-color);
+    padding: 1em 2em;
+    color: #fff;
+}
+
+
+.why-global-item {
+    width: 100%;
+    min-height: 100%;
+}
+
+.why-global-img {
+    object-fit: cover;
+}
+
+.why-global > .intro .left {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.payment-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4em;
+    gap: 1em;
+}
+
+.payment-table > tr, .payment-table > th, .payment-table > td {
+    background-color: var(--background-color);
+    border: 1px solid #333;
+    color: #333;
 }
 
 .footer {
