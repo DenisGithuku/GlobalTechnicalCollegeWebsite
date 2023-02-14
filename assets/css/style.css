@@ -548,6 +548,7 @@ th, td {
     width: 0;
     height: 2px;
     background-color: var(--on-primary-color);
+    opacity: 0.3;
     transition: width 0.3s;
 }
 
