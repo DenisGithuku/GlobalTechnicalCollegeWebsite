@@ -460,9 +460,8 @@ th, td {
 }
 
 .payment-heading {
-    background-color: var(--secondary-color);
+    color: var(--secondary-color);
     padding: 1em 2em;
-    color: #fff;
 }
 
 
