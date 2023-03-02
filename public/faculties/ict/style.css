@@ -26,8 +26,32 @@ ul {
     display: flex;
     flex-direction: row;
     gap: 4em;
+    justify-content: center;
+}
+
+ol.section-details {
+    list-style-type: none;
 }
 
 .section-details, .course-list-section {
     line-height: 2em;
+    font-size: 1.2rem;
+}
+
+.section-header {
+    color: var(--on-primary-color);
+    background-color: var(--secondary-color);
+    padding: .5em 2em;
+    width: 70%;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.section-footer {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    color: var(--primary-color);
+    font-weight: bold;
 }
