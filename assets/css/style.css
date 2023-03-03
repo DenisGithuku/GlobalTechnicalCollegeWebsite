@@ -345,7 +345,7 @@ ul, li {
 
 
 .background-info {
-    padding: 2em 10em;
+    padding: 6em 10em;
     display: flex;
     gap: 1.5em;
     flex-direction: column;
@@ -386,6 +386,7 @@ ul, li {
 
 .background-info-header {
     text-transform: uppercase;
+    padding-bottom: 1em;
 }
 
 .background-img {
