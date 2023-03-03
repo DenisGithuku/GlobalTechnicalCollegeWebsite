@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul {
+    list-style-type: square;
+}
+
+.main-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2em;
+    align-items: center;
+    gap: 2em;
+    justify-content: center;
+}
+
+.course-list-section {
+    display: flex;
+    flex-direction: row;
+    gap: 4em;
+    justify-content: center;
+}
+
+ol.section-details {
+    list-style-type: none;
+}
+
+.section-details, .course-list-section {
+    line-height: 2em;
+    font-size: 1.2rem;
+}
+
+.section-header {
+    color: var(--on-primary-color);
+    background-color: var(--secondary-color);
+    padding: .5em 2em;
+    width: 70%;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.section-footer {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    color: var(--primary-color);
+    font-weight: bold;
+}
