@@ -393,10 +393,21 @@ ul, li {
     max-width: 500px;
 }
 
+.section-header {
+    color: var(--on-primary-color);
+    background: linear-gradient(45deg, var(--secondary-color), transparent);
+    padding: .5em 2em;
+    width: 70%;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
 .course-section {
     display: flex;
     flex-direction: column;
-    padding: 4em;
+    padding: 4em 0;
+    gap: 2em;
     justify-content: center;
     align-items: center;
 }

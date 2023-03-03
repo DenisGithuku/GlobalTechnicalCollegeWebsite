@@ -1,0 +1,14 @@
+table {
+    min-width: 800px;
+}
+
+.course-info {
+    display: flex;
+    gap: 4em;
+}
+
+.section-details {
+    font-size: 1.6rem;
+    line-height: 1.4em;
+    list-style-type: square;
+}
