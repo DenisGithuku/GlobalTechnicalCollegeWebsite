@@ -44,6 +44,11 @@ a {
     flex-direction: column;
 }
 
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
 .contacts-header {
     display: flex;
     flex-direction: row;
@@ -52,7 +57,6 @@ a {
     font-weight: 500;
     background-color: var(--secondary-color);
     color: var(--on-primary-color);
-
 }
 
 .contact-numbers {
@@ -60,7 +64,6 @@ a {
     flex-direction: row;
     gap: 2rem;
 }
-
 
 .main-nav {
     display: flex;
@@ -110,14 +113,15 @@ ul, li {
     list-style-type: none;
 }
 
-
-
 .main-nav-link {
     padding: 0.5em 1em;
     border-radius: 32px;
     color: var(--on-background-color);
     transition: all 0.3s;
+}
 
+.hidden {
+    display: none;
 }
 
 .main-nav-link:hover {
@@ -143,7 +147,7 @@ ul, li {
 
 .dropdown-list {
     background-color: var(--background-color);
-    min-width: 400px;
+    min-width: 500px;
     position: absolute;
     top: 83px;
     overflow: hidden;
@@ -160,7 +164,7 @@ ul, li {
 }
 
 .dropdown-item-link {
-    color: var(--on-background-color)   
+    color: var(--on-background-color)
 }
 
 
@@ -203,6 +207,11 @@ ul, li {
     left: 10px;
     background-color: var(--primary-color);
 }
+
+.fa-bars {
+    color: var(--on-background-variant-color);
+}
+
 
 @keyframes scaleIn {
     from {
@@ -563,3 +572,9 @@ th, td {
     text-decoration: none;
     color: var(--on-primary-color);
 }
+
+/*@media screen and (max-width: 700px) {*/
+/*    .fa-bars {*/
+/*        display: block;*/
+/*    }*/
+/*}*/

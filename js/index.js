@@ -68,3 +68,14 @@ const revealCoreInfoContainers = () => {
 }
 
 revealCoreInfoContainers()
+
+window.onresize = (event) => {
+  const width = event.target.innerWidth;
+  const toggle = document.querySelector('.fa-bars')
+  if (width <= 700) {
+    toggle.classList.remove('hidden')
+  } else {
+    toggle.classList.add('hidden')
+  }
+  console.log(width)
+}
