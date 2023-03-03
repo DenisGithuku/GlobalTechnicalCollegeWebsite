@@ -15,10 +15,10 @@ window.onscroll = () => {
     navbar.classList.remove("sticky");
   }
   prevScrollpos = currentScrollPos;
-  revealer()
+  revealBackground()
 };
 
-const revealer = () => {
+const revealBackground = () => {
   // reference to items to be revealed
   const revealItems = document.querySelectorAll('.reveal')
 
@@ -41,8 +41,11 @@ const revealer = () => {
 }
 
 
-//check the scroll on page load
-revealer()
+//reveal containers on page load
+window.onload = () => {
+  revealBackground()
+  revealCoreInfoContainers()
+}
 
 const revealCoreInfoContainers = () => {
   const coreInfoContainers = document.querySelectorAll('.core-info-container-reveal')
@@ -67,7 +70,6 @@ const revealCoreInfoContainers = () => {
   })
 }
 
-revealCoreInfoContainers()
 
 window.onresize = (event) => {
   const width = event.target.innerWidth;
