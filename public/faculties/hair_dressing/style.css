@@ -21,13 +21,3 @@ body {
 .course-info {
     padding: 2em 0;
 }
-
-.section-header {
-    color: var(--on-primary-color);
-    background: linear-gradient(45deg, var(--secondary-color), transparent);
-    padding: .5em 2em;
-    width: 60%;
-    text-align: center;
-    font-weight: 700;
-    text-transform: uppercase;
-}
