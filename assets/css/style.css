@@ -274,6 +274,7 @@ ul, li {
     height: 300px;
     display: flex;
     flex-direction: column;
+    gap: 1.5em;
     padding: 8em;
     justify-content: center;
     color: var(--background-color);
@@ -288,6 +289,7 @@ ul, li {
     font-size: 1rem;
     transition: all 0.3s;
     color: var(--background-color);
+    cursor: pointer;
 }
 
 .learn-more-btn:hover {
@@ -449,7 +451,7 @@ th, td {
 
 .course-list {
     min-width: 400px;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     line-height: 1.4em;
     list-style-type: square;
 }
