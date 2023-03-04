@@ -30,7 +30,7 @@ const revealBackground = () => {
     const elementHeight = revealItem.getBoundingClientRect().top
 
     //set the height at which the element should be revealed
-    const revealDistance = 150
+    const revealDistance = 200
 
     if (elementHeight < windowHeight - revealDistance) {
       revealItem.classList.add('active')
