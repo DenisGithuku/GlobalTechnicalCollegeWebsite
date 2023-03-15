@@ -74,10 +74,28 @@ const revealCoreInfoContainers = () => {
 window.onresize = (event) => {
   const width = event.target.innerWidth;
   const toggle = document.querySelector('.fa-bars')
-  if (width <= 700) {
+  const navbar = document.querySelector('.navbar')
+  if (width <= 1000) {
     toggle.classList.remove('hidden')
+    navbar.classList.add('hidden')
   } else {
     toggle.classList.add('hidden')
+    navbar.classList.remove('hidden')
   }
   console.log(width)
 }
+
+const toggleNavbar = () => {
+  const navbar = document.querySelector('.navbar')
+  if (navbar.classList.contains('hidden')) {
+    navbar.classList.remove('hidden')
+  } else {
+    navbar.classList.add('hidden')
+  }
+}
+
+document.querySelectorAll('.main-nav-link').forEach(navLink => {
+  navLink.addEventListener('click', toggleNavbar)
+})
+
+document.querySelector('.fa-bars').addEventListener('click', toggleNavbar)
