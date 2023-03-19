@@ -270,16 +270,30 @@ ul, li {
 }
 
 .main-section {
-    background: url("../images/college_students_bg.jpeg");
-    height: 300px;
+    height: 600px;
+}
+
+.main-section-bg {
+    height: inherit;
     background-size: cover;
-    background-repeat: no-repeat;
+    background: url("../images/global photo.jpg") no-repeat;
+    filter: blur(1px);
+    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -o-filter: blur(1px);
+    -ms-filter: blur(1px);
+}
+
+.main-section > .content {
+    color: var(--on-primary-color);
+    z-index: 2;
+    position: absolute;
+    top: 250px;
     display: flex;
     flex-direction: column;
     gap: 1.5em;
     padding: 8em;
     justify-content: center;
-    color: var(--background-color);
 }
 
 .learn-more-btn {
@@ -381,6 +395,13 @@ ul, li {
     font-weight: lighter;
 }
 
+
+.slide-img {
+    width: 100%;
+    height: auto;
+    align-self: center;
+}
+
 .background-info-body > .left {
     display: flex;
     flex-direction: column;
@@ -474,7 +495,7 @@ th, td {
     flex-direction: row;
     line-height: 1.5em;
     scroll-margin-top: 200px;
-    width: 100%;
+    /*width: 100%;*/
 }
 
 .why-global > .intro {
@@ -483,7 +504,7 @@ th, td {
     gap: 2em;
     color: white;
     background-color: var(--primary-color);
-    padding: 3em;
+    padding: 3em 0 3em 2em;
 }
 
 .why-global ul {
@@ -509,6 +530,8 @@ th, td {
 .why-global-item {
     width: 100%;
     min-height: 100%;
+    /*padding: 2em;*/
+    object-fit: cover;
 }
 
 .why-global-img {
@@ -661,7 +684,7 @@ th, td {
     .background-info-body > .left,
     .background-info-body > .right,
     .footer,
-    .footer-info{
+    .footer-info {
         flex-direction: column;
         transition: none;
     }
@@ -671,21 +694,24 @@ th, td {
         align-items: stretch;
         margin: 0 10px;
     }
+
     .core-info-container {
         width: auto;
     }
+
     .background-info-body {
         gap: .5em;
     }
+
     .background-info, .background-info-text {
-        padding: 1em  2em;
-}
+        padding: 1em 2em;
+    }
 
     .core-info-container {
         transition: none;
     }
 
     .dropdown:hover .fa-angle-down {
-    transform: rotate(-450deg);
-}
+        transform: rotate(-450deg);
+    }
 }
