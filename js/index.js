@@ -115,7 +115,7 @@ const goToSlide = (slideIndex) => {
             currentSlide++
         }
         goToSlide(currentSlide)
-    }, 5000)
+    }, 8000)
 }
 
 goToSlide(0)
