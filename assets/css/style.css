@@ -462,7 +462,7 @@ th, td {
     display: flex;
     flex-direction: row;
     line-height: 1.5em;
-    align-items: stretch;
+    /*align-items: stretch;*/
     scroll-margin-top: 200px;
     width: 100%;
 }
