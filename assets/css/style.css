@@ -426,7 +426,6 @@ ul, li {
     vertical-align: middle;
 }
 
-
 .active {
     transform: translateY(0);
     opacity: 1;
@@ -756,4 +755,40 @@ th, td {
     .dropdown:hover .fa-angle-down {
         transform: rotate(-450deg);
     }
+}
+
+.gallery-section {
+    padding: 1em;
+    margin-top: 2em;
+    text-align: center;
+}
+
+.gallery-title {
+    color: var(--primary-color);
+}
+
+.gallery-title::after {
+    content: '';
+    background-color: var(--primary-filter-color);
+    height: 2px;
+    width: 200px;
+    position: relative;
+    bottom: 0;
+    display: block;
+    top: 1em;
+    margin: 0 auto;
+}
+
+.gallery {
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: auto auto auto auto;
+    padding: 4em;
+    justify-content: center;
+}
+.gallery-img {
+    height: 250px;
+    width: 300px;
+    object-fit: cover;
+    vertical-align: middle;
 }
