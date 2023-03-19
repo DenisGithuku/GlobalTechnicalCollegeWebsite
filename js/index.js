@@ -94,8 +94,8 @@ const toggleNavbar = () => {
   }
 }
 
-document.querySelectorAll('.main-nav-link').forEach(navLink => {
-  navLink.addEventListener('click', toggleNavbar)
-})
-
-document.querySelector('.fa-bars').addEventListener('click', toggleNavbar)
+// document.querySelectorAll('.main-nav-link').forEach(navLink => {
+//   navLink.addEventListener('click', toggleNavbar)
+// })
+//
+// document.querySelector('.fa-bars').addEventListener('click', toggleNavbar)
