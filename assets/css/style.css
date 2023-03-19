@@ -10,6 +10,7 @@
     --on-background-variant-color: rgba(0, 0, 0, 0.5);
     --shadow-color: rgba(211, 211, 211, 0.137);
     --dimens-default: 0px;
+    --primary-filter-color: rgba(0, 153, 51, .4);
     --dimens-tiny: 2px;
     --dimens-extra-small: 4px;
     --dimens-small: 8px;
@@ -277,22 +278,21 @@ ul, li {
     height: inherit;
     background-size: cover;
     background: url("../images/global photo.jpg") no-repeat;
-    filter: blur(1px);
-    -webkit-filter: blur(1px);
-    -moz-filter: blur(1px);
-    -o-filter: blur(1px);
-    -ms-filter: blur(1px);
+    background-attachment: fixed;
 }
 
 .main-section > .content {
     color: var(--on-primary-color);
     z-index: 2;
     position: absolute;
-    top: 250px;
+    background-color: var(--primary-filter-color);
+    backdrop-filter: blur(5px);
+    margin-left: 2em;
+    top: 200px;
     display: flex;
     flex-direction: column;
     gap: 1.5em;
-    padding: 8em;
+    padding: 4em;
     justify-content: center;
 }
 
@@ -310,6 +310,28 @@ ul, li {
 
 .learn-more-btn:hover {
     background-color: var(--background-color);
+    color: var(--primary-color);
+}
+
+.slider-content {
+    position: absolute;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    color: white;
+    background-color: var(--primary-filter-color);
+    padding: 3rem;
+    width: 70%;
+    margin: 0 4rem;
+}
+
+.slide-title {
+    font-size: 3rem;
+}
+.learn-more-btn a {
+    color: white;
+}
+.learn-more-btn:hover a {
     color: var(--primary-color);
 }
 
@@ -379,6 +401,32 @@ ul, li {
     opacity: 0;
 }
 
+.slider {
+    position: relative;
+    overflow: hidden;
+    max-width: 100rem;
+    height: 50rem;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 50rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    transition: all 1s;
+}
+
+.slide-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+
 .active {
     transform: translateY(0);
     opacity: 1;
@@ -395,12 +443,6 @@ ul, li {
     font-weight: lighter;
 }
 
-
-.slide-img {
-    width: 100%;
-    height: auto;
-    align-self: center;
-}
 
 .background-info-body > .left {
     display: flex;

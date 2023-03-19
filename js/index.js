@@ -8,94 +8,114 @@ let prevScrollpos = window.pageYOffset;
 const navbarOffset = navbar.offsetTop;
 
 window.onscroll = () => {
-  let currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > navbarOffset) {
-    navbar.classList.add("sticky");
-  } else {
-    navbar.classList.remove("sticky");
-  }
-  prevScrollpos = currentScrollPos;
-  revealBackground()
+    let currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > navbarOffset) {
+        navbar.classList.add("sticky");
+    } else {
+        navbar.classList.remove("sticky");
+    }
+    prevScrollpos = currentScrollPos;
+    revealBackground()
 };
 
 const revealBackground = () => {
-  // reference to items to be revealed
-  const revealItems = document.querySelectorAll('.reveal')
+    // reference to items to be revealed
+    const revealItems = document.querySelectorAll('.reveal')
 
-  revealItems.forEach(revealItem => {
-    // get window height according to the viewport
-    const windowHeight = window.innerHeight
+    revealItems.forEach(revealItem => {
+        // get window height according to the viewport
+        const windowHeight = window.innerHeight
 
-    // get how far the item is from the top
-    const elementHeight = revealItem.getBoundingClientRect().top
+        // get how far the item is from the top
+        const elementHeight = revealItem.getBoundingClientRect().top
 
-    //set the height at which the element should be revealed
-    const revealDistance = 200
+        //set the height at which the element should be revealed
+        const revealDistance = 200
 
-    if (elementHeight < windowHeight - revealDistance) {
-      revealItem.classList.add('active')
-    } else {
-      revealItem.classList.remove('active')
-    }
-  })
+        if (elementHeight < windowHeight - revealDistance) {
+            revealItem.classList.add('active')
+        } else {
+            revealItem.classList.remove('active')
+        }
+    })
 }
 
 
 //reveal containers on page load
 window.onload = () => {
-  revealBackground()
-  revealCoreInfoContainers()
+    revealBackground()
+    revealCoreInfoContainers()
 }
 
 const revealCoreInfoContainers = () => {
-  const coreInfoContainers = document.querySelectorAll('.core-info-container-reveal')
+    const coreInfoContainers = document.querySelectorAll('.core-info-container-reveal')
 
-  coreInfoContainers.forEach(coreInfoContainer => {
-    //get ref to core into containers
+    coreInfoContainers.forEach(coreInfoContainer => {
+        //get ref to core into containers
 
-    // get ref to the viewport width
-    const windowWidth = window.innerWidth
+        // get ref to the viewport width
+        const windowWidth = window.innerWidth
 
-    // set the distance required for reveal
-    const revealDistance = 50
+        // set the distance required for reveal
+        const revealDistance = 50
 
-    //calculate left of container
-    const leftOfContainer = coreInfoContainer.getBoundingClientRect().left
-    if (leftOfContainer < windowWidth - revealDistance) {
-      coreInfoContainer.classList.add('core-info-active')
-    } else {
-      coreInfoContainer.classList.remove('core-info-active')
-    }
-    
-  })
+        //calculate left of container
+        const leftOfContainer = coreInfoContainer.getBoundingClientRect().left
+        if (leftOfContainer < windowWidth - revealDistance) {
+            coreInfoContainer.classList.add('core-info-active')
+        } else {
+            coreInfoContainer.classList.remove('core-info-active')
+        }
+
+    })
 }
 
 
 window.onresize = (event) => {
-  const width = event.target.innerWidth;
-  const toggle = document.querySelector('.fa-bars')
-  const navbar = document.querySelector('.navbar')
-  if (width <= 1000) {
-    toggle.classList.remove('hidden')
-    navbar.classList.add('hidden')
-  } else {
-    toggle.classList.add('hidden')
-    navbar.classList.remove('hidden')
-  }
-  console.log(width)
+    const width = event.target.innerWidth;
+    const toggle = document.querySelector('.fa-bars')
+    const navbar = document.querySelector('.navbar')
+    if (width <= 1000) {
+        toggle.classList.remove('hidden')
+        navbar.classList.add('hidden')
+        document.querySelector('.fa-bars').addEventListener('click', toggleNavbar)
+    } else {
+        toggle.classList.add('hidden')
+        navbar.classList.remove('hidden')
+    }
+    console.log(width)
 }
 
 const toggleNavbar = () => {
-  const navbar = document.querySelector('.navbar')
-  if (navbar.classList.contains('hidden')) {
-    navbar.classList.remove('hidden')
-  } else {
-    navbar.classList.add('hidden')
-  }
+    const navbar = document.querySelector('.navbar')
+    if (navbar.classList.contains('hidden')) {
+        navbar.classList.remove('hidden')
+    } else {
+        navbar.classList.add('hidden')
+    }
 }
 
 // document.querySelectorAll('.main-nav-link').forEach(navLink => {
 //   navLink.addEventListener('click', toggleNavbar)
 // })
-//
-// document.querySelector('.fa-bars').addEventListener('click', toggleNavbar)
+
+
+let currentSlide = 0
+const slides = document.querySelectorAll('.slide')
+const maxSlide = slides.length
+
+const goToSlide = (slideIndex) => {
+    slides.forEach((slide, index) => {
+        slide.style.transform = `translateX(${100 * (index - slideIndex)}%)`
+    })
+    setTimeout(() => {
+        if (currentSlide === maxSlide - 1) {
+            currentSlide = 0
+        } else {
+            currentSlide++
+        }
+        goToSlide(currentSlide)
+    }, 5000)
+}
+
+goToSlide(0)
