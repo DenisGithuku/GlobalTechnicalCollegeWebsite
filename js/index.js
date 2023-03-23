@@ -103,6 +103,7 @@ const toggleNavbar = () => {
 let currentSlide = 0
 const slides = document.querySelectorAll('.slide')
 const maxSlide = slides.length
+const slideAnimationTimeout = 8000
 
 const goToSlide = (slideIndex) => {
     slides.forEach((slide, index) => {
@@ -115,7 +116,8 @@ const goToSlide = (slideIndex) => {
             currentSlide++
         }
         goToSlide(currentSlide)
-    }, 8000)
+    }, slideAnimationTimeout)
 }
 
 goToSlide(0)
+ngText.classList.add('typing-text-animation');

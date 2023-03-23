@@ -58,18 +58,6 @@ ol.section-details {
 
 .banner {
     background: url("../../../assets/images/ict/IMG_0262.JPG") fixed;
-    width: 100%;
-    height: 40rem;
     background-size: cover;
-    object-fit: cover;
-    vertical-align: middle;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-.slide-title {
-    background-color: var(--primary-filter-color);
-    padding: 1em 4em;
-    color: var(--on-primary-color);
 }

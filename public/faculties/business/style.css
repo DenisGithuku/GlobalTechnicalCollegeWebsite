@@ -30,20 +30,6 @@
 }
 
 .banner {
-    background: url("../../../assets/images/business/IMG_0768.JPG");
-    background-attachment: fixed;
-    width: 100%;
-    height: 40rem;
+    background: url("../../../assets/images/business/IMG_0768.JPG") fixed;
     background-size: cover;
-    object-fit: cover;
-    vertical-align: middle;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.slide-title {
-    background-color: var(--primary-filter-color);
-    padding: 1em 4em;
-    color: var(--on-primary-color);
 }
