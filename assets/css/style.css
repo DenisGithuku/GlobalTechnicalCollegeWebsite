@@ -250,7 +250,7 @@ ul, li {
     }
 }
 
-@keyframes slideUp  {
+@keyframes slideUp {
     0% {
         top: 20px;
         opacity: .4;
@@ -349,6 +349,7 @@ ul, li {
 #slide-hair-dressing {
     background-image: url("../images/hair_dressing/IMG_1703.JPG");
 }
+
 .slide::after {
     content: '';
     position: absolute;
@@ -374,9 +375,37 @@ ul, li {
 .slide-title {
     font-size: 3rem;
 }
+
+.banner {
+    width: 100%;
+    height: 50rem;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.banner::after {
+    content: '';
+    width: 100%;
+    height: inherit;
+    display: block;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.slide-title {
+    position: relative;
+    z-index: 1;
+    color: var(--on-primary-color);
+}
+
 .learn-more-btn a {
     color: white;
 }
+
 .learn-more-btn:hover a {
     color: var(--primary-color);
 }
@@ -623,6 +652,7 @@ th, td {
 .why-global-img {
     object-fit: cover;
 }
+
 .description {
     padding: 4em;
 }
@@ -836,9 +866,11 @@ th, td {
     padding: 4em;
     justify-content: center;
 }
+
 .gallery-img {
     height: 250px;
     width: 300px;
     object-fit: cover;
     vertical-align: middle;
 }
+

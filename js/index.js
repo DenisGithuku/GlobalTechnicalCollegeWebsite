@@ -120,19 +120,4 @@ const goToSlide = (slideIndex) => {
 }
 
 goToSlide(0)
-
-const sliderContentIndex = 0
-let currentSliderContent = 0
-const setSlideAnimation = () => {
-    const sliderContent = document.querySelectorAll('.slider-content')
-    sliderContent.forEach((slider, index) => {
-        if (currentSliderContent === sliderContent.length - 1) {
-            currentSliderContent = 0
-        } else {
-            currentSliderContent++
-        }
-        slider.style.animationDelay = `${index * slideAnimationTimeout + 2000}s`
-    })
-}
-
-setSlideAnimation()
+ngText.classList.add('typing-text-animation');
