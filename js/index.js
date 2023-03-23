@@ -103,6 +103,7 @@ const toggleNavbar = () => {
 let currentSlide = 0
 const slides = document.querySelectorAll('.slide')
 const maxSlide = slides.length
+const slideAnimationTimeout = 8000
 
 const goToSlide = (slideIndex) => {
     slides.forEach((slide, index) => {
@@ -115,7 +116,23 @@ const goToSlide = (slideIndex) => {
             currentSlide++
         }
         goToSlide(currentSlide)
-    }, 8000)
+    }, slideAnimationTimeout)
 }
 
 goToSlide(0)
+
+const sliderContentIndex = 0
+let currentSliderContent = 0
+const setSlideAnimation = () => {
+    const sliderContent = document.querySelectorAll('.slider-content')
+    sliderContent.forEach((slider, index) => {
+        if (currentSliderContent === sliderContent.length - 1) {
+            currentSliderContent = 0
+        } else {
+            currentSliderContent++
+        }
+        slider.style.animationDelay = `${index * slideAnimationTimeout + 2000}s`
+    })
+}
+
+setSlideAnimation()

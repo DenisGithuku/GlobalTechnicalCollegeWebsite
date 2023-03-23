@@ -250,6 +250,17 @@ ul, li {
     }
 }
 
+@keyframes slideUp  {
+    0% {
+        top: 20px;
+        opacity: .4;
+    }
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+
 .register-btn {
     padding: 1em 1.5em;
     background-color: var(--primary-color);
@@ -356,6 +367,8 @@ ul, li {
     flex-direction: column;
     color: white;
     z-index: 1;
+    top: 0;
+    animation: slideUp .4s;
 }
 
 .slide-title {
@@ -568,11 +581,11 @@ th, td {
     display: flex;
     flex-direction: row;
     line-height: 1.5em;
+    justify-content: space-between;
     scroll-margin-top: 200px;
-    /*width: 100%;*/
 }
 
-.why-global > .intro {
+.why-global > .description {
     display: flex;
     flex-direction: column;
     gap: 2em;
@@ -602,20 +615,24 @@ th, td {
 
 
 .why-global-item {
-    width: 100%;
-    min-height: 100%;
-    /*padding: 2em;*/
-    object-fit: cover;
+    max-width: 50%;
+    height: auto;
+    flex: 1;
 }
 
 .why-global-img {
     object-fit: cover;
 }
+.description {
+    padding: 4em;
+}
 
-.why-global > .intro .left {
-    display: flex;
-    flex-direction: column;
-    gap: 2em;
+.section-intro {
+    margin-right: 1em;
+}
+
+.description-item {
+    margin: 0 4em;
 }
 
 .payment-section {
