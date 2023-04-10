@@ -24,7 +24,6 @@
     margin: 0;
 }
 
-
 body {
     margin: 0px;
     box-sizing: border-box;
@@ -121,10 +120,6 @@ ul, li {
     transition: all 0.3s;
 }
 
-.hidden {
-    display: none;
-}
-
 .main-nav-link:hover {
     color: var(--background-color);
     background-color: var(--primary-color);
@@ -211,6 +206,10 @@ ul, li {
 
 .fa-bars {
     color: var(--on-background-variant-color);
+}
+
+.hidden {
+    display: none;
 }
 
 
@@ -625,6 +624,7 @@ th, td {
 
 .why-global ul {
     list-style-type: square;
+    margin: 0;
 }
 
 .why-global .additional-info {
@@ -745,97 +745,6 @@ th, td {
     color: var(--on-primary-color);
 }
 
-@media screen and (max-width: 1000px) {
-    .fa-bars {
-        display: block;
-    }
-
-    .navbar {
-        flex-direction: column;
-        position: absolute;
-        background-color: var(--background-color);
-        top: 83px;
-        min-width: 400px;
-        z-index: 2;
-    }
-
-    .why-global {
-        flex-direction: column;
-    }
-
-    .why-global-item {
-        width: auto;
-    }
-
-    .why-global-img {
-        display: none;
-    }
-
-    .navbar .nav-link-item:hover {
-        background-color: var(--primary-color);
-        color: var(--on-primary-color);
-    }
-
-    .nav-link-item {
-        padding: 1em;
-    }
-
-    .navbar .main-nav-link {
-        padding: 5px 10px;
-        background-color: transparent;
-        color: var(--on-background-color);
-    }
-
-    .navbar .nav-link-item:hover .main-nav-link {
-        color: var(--on-primary-color);
-    }
-
-    .dropdown-list {
-        left: 400px;
-        top: 0;
-    }
-
-    .contacts-header, .contact-numbers {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .background-info,
-    .background-info-body,
-    .background-info-body > .left,
-    .background-info-body > .right,
-    .footer,
-    .footer-info {
-        flex-direction: column;
-        transition: none;
-    }
-
-    .core-info-section {
-        flex-direction: column;
-        align-items: stretch;
-        margin: 0 10px;
-    }
-
-    .core-info-container {
-        width: auto;
-    }
-
-    .background-info-body {
-        gap: .5em;
-    }
-
-    .background-info, .background-info-text {
-        padding: 1em 2em;
-    }
-
-    .core-info-container {
-        transition: none;
-    }
-
-    .dropdown:hover .fa-angle-down {
-        transform: rotate(-450deg);
-    }
-}
 
 .gallery-section {
     padding: 1em;
@@ -873,4 +782,202 @@ th, td {
     object-fit: cover;
     vertical-align: middle;
 }
+
+@media screen and (max-width: 768px) {
+    .main-nav {
+        flex-direction: column;
+        justify-content: start;
+        gap: 0;
+        text-align: start;
+        align-items: start;
+        padding: .5em;
+    }
+
+    .fa-bars {
+        display: initial;
+        align-self: flex-end;
+        position: absolute;
+        cursor: pointer;
+        right: 50px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        position: static;
+        background-color: var(--background-color);
+        top: 83px;
+        /*min-width: 400px;*/
+        z-index: 2;
+    }
+
+    .nav-link-item {
+        padding: .5em 0;
+        color: var(--on-background-color);
+    }
+
+    .navbar .nav-link-item:hover {
+        background-color: white;
+        color: var(--on-background-color);
+        transition: none;
+    }
+
+    .dropdown:hover {
+        background-color: white;
+    }
+
+    .dropdown-item:hover {
+        background-color: transparent;
+    }
+
+    .dropdown-item:hover > .dropdown-item-link {
+        left: 0;
+        color: var(--on-background-color);
+        background-color: transparent;
+    }
+
+
+    .why-global {
+        flex-direction: column;
+    }
+
+    .why-global > .description {
+        padding: 1.5em;
+    }
+
+    .why-global-item > .description-item {
+        margin: 0;
+    }
+
+    .core-info-section {
+        margin: 0;
+        overflow: hidden;
+        width: 100%;
+        justify-content: normal;
+    }
+
+    .core-info-container {
+        width: auto;
+        margin: 0;
+    }
+
+    .why-global-item {
+        /*width: 100%;*/
+        max-width: 100%;
+    }
+
+    .why-global-img {
+        display: none;
+    }
+
+    .course-list {
+        min-width: auto;
+    }
+
+    .nav-link-item {
+        padding: 1em;
+    }
+
+    .dropdown-list {
+        border: none;
+    }
+
+    .navbar .main-nav-link {
+        padding: 5px 10px;
+        background-color: transparent;
+        color: var(--on-background-color);
+        transition: none;
+    }
+
+
+    .main-nav-link:hover {
+        background-color: transparent;
+        color: var(--background-color);
+    }
+
+    .navbar .nav-link-item:hover .main-nav-link {
+        color: var(--on-background-color);
+    }
+
+    .dropdown-list {
+        left: 0;
+        position: relative;
+        top: 10px;
+        background-color: var(--on-primary-color);
+    }
+
+    .contacts-header, .contact-numbers {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .background-info,
+    .background-info-body,
+    .background-info-body > .left,
+    .background-info-body > .right,
+    .footer,
+    .footer-info {
+        flex-direction: column;
+        transition: none;
+    }
+
+    .footer {
+        padding: 1em;
+    }
+
+    .core-info-section {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: start;
+    }
+
+    /*.core-info-container {*/
+    /*    width: 100%;*/
+    /*}*/
+
+    .background-info-body {
+        gap: .5em;
+    }
+
+    .background-info, .background-info-text {
+        padding: 1em 2em;
+    }
+
+    .core-info-container {
+        transition: none;
+    }
+
+    .dropdown:hover .fa-angle-down {
+        transform: rotate(-540deg);
+    }
+
+    .slider {
+        display: none;
+    }
+
+    .gallery {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .contacts-header {
+        display: none;
+    }
+
+    .course-info {
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    .slide-title {
+        font-size: 1.6rem;
+    }
+
+    .banner {
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
 
