@@ -809,6 +809,10 @@ th, td {
         z-index: 2;
     }
 
+    .sticky {
+        position: static;
+    }
+
     .nav-link-item {
         padding: .5em 0;
         color: var(--on-background-color);
@@ -869,6 +873,7 @@ th, td {
 
     .course-list {
         min-width: auto;
+        list-style-type: none;
     }
 
     .nav-link-item {
@@ -918,8 +923,10 @@ th, td {
         transition: none;
     }
 
+
     .footer {
         padding: 1em;
+        font-size: 1rem;
     }
 
     .core-info-section {
@@ -932,8 +939,9 @@ th, td {
         gap: .5em;
     }
 
-    .background-info, .background-info-text {
-        padding: 1em 2em;
+    .background-info {
+        padding: 0 1em;
+        scroll-margin-top: 0;
     }
 
     .core-info-container {
@@ -945,7 +953,7 @@ th, td {
     }
 
     .slider {
-        display: none;
+        height: 10rem;
     }
 
     .gallery-section, .gallery {
@@ -953,6 +961,7 @@ th, td {
         flex-direction: column;
         padding: 0 .5em;
     }
+
     .gallery-img {
         width: 100%;
         display: block;
@@ -967,8 +976,19 @@ th, td {
         padding: 1em;
     }
 
+    .slide {
+        background-color: white;
+    }
+
+    #slide-business,
+    #slide-electrical,
+    #slide-hair-dressing, #slide-ict, #slide-languages {
+        background-color: white;
+        background-image: none;
+    }
+
     .slide-title {
-        font-size: 1.6rem;
+        font-size: 1rem;
     }
 
     .banner {
@@ -977,17 +997,18 @@ th, td {
         background-repeat: no-repeat;
     }
 
+    .reveal {
+        transform: translateY(0);
+    }
+
     .core-info-container-reveal {
-        transform: translate(0);
+        transform: translateX(0);
         opacity: 1;
     }
 
     th, td {
-    padding: 0.2em;
-}
-
-
-
+        padding: 0.2em;
+    }
 }
 
 
