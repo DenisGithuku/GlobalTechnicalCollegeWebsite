@@ -982,6 +982,11 @@ th, td {
         opacity: 1;
     }
 
+    th, td {
+    padding: 0.2em;
+}
+
+
 
 }
 
