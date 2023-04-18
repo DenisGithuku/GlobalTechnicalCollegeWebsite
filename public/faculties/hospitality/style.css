@@ -7,3 +7,17 @@ table {
     background: url("../../../assets/images/hospitality/IMG_1736.JPG") fixed;
     background-size: cover;
 }
+@media screen and (max-width: 768px) {
+     table {
+        min-width: auto;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    th, td {
+        padding: .2em;
+    }
+    ul {
+        list-style-type: none;
+    }
+}

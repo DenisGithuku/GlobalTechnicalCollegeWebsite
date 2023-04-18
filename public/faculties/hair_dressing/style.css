@@ -28,3 +28,21 @@ body {
     background-size: cover;
 
 }
+
+@media screen and (max-width: 768px) {
+     table {
+        min-width: auto;
+         margin: 1em;
+         font-size: .7em;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    th, td {
+        padding: .2em;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+}

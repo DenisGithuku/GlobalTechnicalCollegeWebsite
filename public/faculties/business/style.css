@@ -1,6 +1,7 @@
 * {
     margin: 0;
 }
+
 .course-info {
     display: flex;
     flex-direction: row;
@@ -29,7 +30,39 @@
     color: var(--secondary-color);
 }
 
+.description {
+    margin: 0;
+    padding: 0;
+}
+
 .banner {
     background: url("../../../assets/images/business/IMG_0768.JPG") fixed;
     background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+    .banner {
+        display: none;
+    }
+     table {
+        min-width: auto;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    th, td {
+        padding: .2em;
+    }
+
+    .course-info {
+        flex-direction: column;
+    }
+
+    .section-details {
+        font-size: 1rem;
+    }
+
+    ul {
+        list-style-type: none;
+    }
 }

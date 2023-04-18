@@ -2,19 +2,19 @@
 const navbar = document.querySelector(".main-nav");
 
 /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
-let prevScrollpos = window.pageYOffset;
+let prevScrollPos = window.scrollY;
 
 /* Get the current navbar scroll offset */
 const navbarOffset = navbar.offsetTop;
 
 window.onscroll = () => {
-    let currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > navbarOffset) {
+    let currentScrollPos = window.scrollY;
+    if (prevScrollPos > navbarOffset) {
         navbar.classList.add("sticky");
     } else {
         navbar.classList.remove("sticky");
     }
-    prevScrollpos = currentScrollPos;
+    prevScrollPos = currentScrollPos;
     revealBackground()
 };
 
@@ -38,6 +38,14 @@ const revealBackground = () => {
             revealItem.classList.remove('active')
         }
     })
+}
+
+window.onresize = () => {
+    if (window.innerWidth < 768) {
+        const revealItem = document.querySelector('.background-info')
+        revealItem.classList.toggle("reveal")
+        revealItem.classList.toggle('active')
+    }
 }
 
 
@@ -71,33 +79,23 @@ const revealCoreInfoContainers = () => {
 }
 
 
-window.onresize = (event) => {
-    const width = event.target.innerWidth;
-    const toggle = document.querySelector('.fa-bars')
-    const navbar = document.querySelector('.navbar')
-    if (width <= 1000) {
-        toggle.classList.remove('hidden')
-        navbar.classList.add('hidden')
-        document.querySelector('.fa-bars').addEventListener('click', toggleNavbar)
-    } else {
-        toggle.classList.add('hidden')
-        navbar.classList.remove('hidden')
-    }
-    console.log(width)
-}
-
 const toggleNavbar = () => {
-    const navbar = document.querySelector('.navbar')
-    if (navbar.classList.contains('hidden')) {
-        navbar.classList.remove('hidden')
-    } else {
-        navbar.classList.add('hidden')
-    }
+    document.querySelector('.navbar').classList.toggle('hidden')
 }
 
-// document.querySelectorAll('.main-nav-link').forEach(navLink => {
-//   navLink.addEventListener('click', toggleNavbar)
-// })
+
+const menuIcon = document.querySelector('.fa-bars')
+menuIcon.addEventListener('click', () => {
+    toggleNavbar()
+})
+
+document.querySelectorAll('.main-nav-link').forEach(navLink => {
+    navLink.addEventListener('click', toggleNavbar)
+})
+
+document.querySelectorAll('.dropdown-item-link').forEach(dropDownLink => {
+    dropDownLink.addEventListener('click', toggleNavbar)
+})
 
 
 let currentSlide = 0
@@ -120,4 +118,3 @@ const goToSlide = (slideIndex) => {
 }
 
 goToSlide(0)
-ngText.classList.add('typing-text-animation');

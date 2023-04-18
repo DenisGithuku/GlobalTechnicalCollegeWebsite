@@ -61,3 +61,48 @@ ol.section-details {
     background-size: cover;
 
 }
+
+@media screen and (max-width: 768px) {
+    .course-list-section, .main-item, .section-footer {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .section-details, .section-footer {
+        padding: 2em;
+    }
+
+    .section-header {
+        width: auto;
+    }
+
+
+    table {
+        overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    }
+
+    th, td {
+    padding: .2em;
+}
+
+    .main-item {
+        align-items: start;
+        padding: 1em;
+    }
+
+    .section-header {
+        background: none;
+        color: var(--on-background-color);
+    }
+
+    .section-details {
+        padding: 0 2em;
+    }
+    ul {
+        list-style-type: none;
+    }
+    .banner {
+        display: none;
+    }
+}

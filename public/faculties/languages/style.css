@@ -17,3 +17,26 @@ table {
     background: url("../../../assets/images/languages/IMG_1693.JPG") fixed;
     background-size: cover;
 }
+
+@media screen and (max-width: 768px) {
+
+    .section-details {
+        font-size: 1.2rem;
+    }
+
+    table {
+        min-width: auto;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    th, td {
+        padding: .2em;
+    }
+    ul {
+        list-style-type: none;
+    }
+    .banner {
+        display: none;
+    }
+}
