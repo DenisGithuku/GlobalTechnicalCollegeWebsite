@@ -754,6 +754,7 @@ th, td {
 
 .gallery-title {
     color: var(--primary-color);
+    padding: 1em 0;
 }
 
 .gallery-title::after {
@@ -764,7 +765,7 @@ th, td {
     position: relative;
     bottom: 0;
     display: block;
-    top: 1em;
+    top: .2em;
     margin: 0 auto;
 }
 
@@ -799,6 +800,8 @@ th, td {
         position: absolute;
         cursor: pointer;
         right: 20px;
+        top: 20px;
+        z-index: 2;
     }
 
     .navbar {
@@ -921,6 +924,11 @@ th, td {
     .footer-info {
         flex-direction: column;
         transition: none;
+        text-align: justify;
+    }
+
+    .background-info-body > .right {
+        max-width: 100%;
     }
 
 
@@ -936,11 +944,15 @@ th, td {
     }
 
     .background-info-body {
-        gap: .5em;
+        gap: .2em;
+    }
+
+    .background-info-content .course-section{
+        padding: 1em 0;
     }
 
     .background-info {
-        padding: 0 1em;
+        padding: 1em;
         scroll-margin-top: 0;
     }
 
@@ -951,11 +963,6 @@ th, td {
     .dropdown:hover .fa-angle-down {
         transform: rotate(-540deg);
     }
-
-    .slider {
-        height: 10rem;
-    }
-
     .gallery-section, .gallery {
         display: flex;
         flex-direction: column;
@@ -973,11 +980,16 @@ th, td {
 
     .course-info {
         flex-direction: column;
-        padding: 1em;
+        padding: .5em;
     }
 
-    .slide {
-        background-color: white;
+    .section-details {
+        list-style-type: none;
+        line-height: 1.5em;
+    }
+
+    .slider {
+        display: none;
     }
 
     #slide-business,
